@@ -6,6 +6,6 @@ type Users struct {
 	gorm.Model
 	Name      string `json:"name"`
 	Age       int    `json:"age"`
-	CompanyID int
+	CompanyID int    `json:"company_id"`
 	Company   Company
 }

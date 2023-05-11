@@ -6,7 +6,7 @@ import (
 )
 
 func MountRoutes(app *fiber.App) {
-	app.Get("/main/:id", controllers.MainController)
-	app.Post("/main", controllers.BodyController)
+	app.Get("/main/:cid", controllers.MainController)
+	app.Post("/main", controllers.BodyControllerTx)
 	app.Post("/company", controllers.CreateCompanyController)
 }

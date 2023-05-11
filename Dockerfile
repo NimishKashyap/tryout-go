@@ -20,8 +20,8 @@ WORKDIR $GOPATH/ github.com/LegalForceLawRAPC/go-template
 COPY . .
 
 # # Fetch dependencies.
-# RUN go mod download
-# RUN go mod verify
+RUN go mod download
+RUN go mod verify
 
 # Build the binary.
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags='-w -s -extldflags "-static"' -a -o /go/bin/main

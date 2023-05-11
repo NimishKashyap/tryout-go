@@ -8,14 +8,12 @@ import (
 )
 
 func MainController(c *fiber.Ctx) error {
-	id, err := c.ParamsInt("id")
+	id, err := c.ParamsInt("cid")
 	if err != nil {
 		log.Fatalf("Could not find param")
 	}
 
-	log.Println(id)
-
-	emp := models.Users{Name: "Nimish", Age: 10}
+	emp := models.Users{Name: "Nimish", Age: 10, CompanyID: id}
 
 	return c.JSON(emp)
 }
