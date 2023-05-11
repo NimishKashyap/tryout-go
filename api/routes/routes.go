@@ -8,4 +8,5 @@ import (
 func MountRoutes(app *fiber.App) {
 	app.Get("/main/:id", controllers.MainController)
 	app.Post("/main", controllers.BodyController)
+	app.Post("/company", controllers.CreateCompanyController)
 }
